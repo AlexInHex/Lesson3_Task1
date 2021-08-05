@@ -6,24 +6,100 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-            int[] array = new int[20];
+          
+
+            sbyte[] array = new sbyte[20];
             Random random = new Random();
-            for (int i = 0; i < array.Length; i++)
+
+             for (sbyte i = 0; i < array.Length; i++)
+             {
+                 array[i] = (sbyte)random.Next();
+                 Console.WriteLine(array[i]);
+
+             }
+
+             Console.WriteLine("--------------------------------------------");
+            //----------------------------------------------------------------
+
+
+            // Задание№1
+
+            /* for (int i = 0; i < array.Length; i++)
+             {
+                 if (array[i] < array[i+1])
+                 {
+                     Console.WriteLine(array[i+1]);
+                 }
+             } */
+
+            //-----------------------------------------------------
+
+
+            // Задание №2
+            /*
+            sbyte max = -128;
+            sbyte min = 127;
+            int indexMax = -1;
+            int indexMin = -1;
+
+
+            for (byte i = 0; i < array.Length; i++)
             {
-                array[i] = random.Next();
-                Console.WriteLine(array[i]);
-
-            }
-
-            Console.WriteLine();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (array[i] < array[i+1])
+                if (array[i] > max)
                 {
-                    Console.WriteLine(array[i+1]);
+                    max = array[i];
+                    indexMax = i;
+                }
+
+                if (array[i] < min)
+                {
+                    min = array[i];
+                    indexMin = i;
                 }
             }
+
+            Console.WriteLine("Maximum = " + max + " Его индекс = " + indexMax);
+            Console.WriteLine("Minimum = " + min + " Его индекс = " + indexMin);
+
+            array[indexMax] = min;
+            array[indexMin] = max;
+
+            Console.WriteLine();
+            Console.WriteLine("массив изменен ");
+            Console.WriteLine();
+
+            for (byte i = 0; i < array.Length; i++)
+            {
+                Console.WriteLine(array[i]);
+            }
+            */
+
+
+
+            //-------------------------------------------------
+
+
+            // Задание №3
+            /*
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (array[i] > 0)
+                {
+                    Console.WriteLine("первый положительный член массива под индексом - " + i
+                            + " его значение = " + array[i]);
+                    break;
+                }
+            }
+            */
+
+            //--------------------------------------------------
+
+
+            //Задание №4
+
+            
+
         }
     }
 }
