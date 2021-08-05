@@ -97,9 +97,53 @@ namespace Lesson2
 
 
             //Задание №4
+            /*
+            double min = 0;
+            double indexMin = -1;
+            double z;
 
-            
+            for (sbyte i = 0; i < array.Length; i++)
+            {
+                z = i % 2;
+                if (z != 0)
+                {
+                    if (min > array[i])
+                    {
+                        min = array[i];
+                        indexMin = i;
+                    }
+                }
+            }
 
+            Console.WriteLine("Индеск элемента - " + indexMin + " Значение элемента = " + min);
+            */
+
+            //--------------------------------------------------------
+
+
+            //Задание №5
+            /*
+            double sum = 0;
+
+            for (sbyte i = 0; i < array.Length; i++)
+            {
+                sum = sum + array[i];
+            }
+
+            sum = sum / 20;
+
+            Console.WriteLine("Среднее арифметическое = " + sum);
+
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (sum < array[i])
+                {
+                    Console.WriteLine("Этот элемент больше среднего арифметического - " + array[i]);
+                }
+            }
+            */
+
+            //------------------------------------------------------------------------
         }
     }
 }
