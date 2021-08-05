@@ -7,7 +7,8 @@ namespace Lesson2
         static void Main(string[] args)
         {
           
-
+            //НАЧАЛО БЛОКА ДЛЯ 1-5 заданий
+            /*
             sbyte[] array = new sbyte[20];
             Random random = new Random();
 
@@ -19,6 +20,14 @@ namespace Lesson2
              }
 
              Console.WriteLine("--------------------------------------------");
+            */
+            //КОНЕЦ БЛОКА ДЛЯ 1-5 заданий
+            //
+            //
+            //
+            //
+            //
+            //
             //----------------------------------------------------------------
 
 
@@ -102,7 +111,7 @@ namespace Lesson2
             double indexMin = -1;
             double z;
 
-            for (sbyte i = 0; i < array.Length; i++)
+            for (byte i = 0; i < array.Length; i++)
             {
                 z = i % 2;
                 if (z != 0)
@@ -125,7 +134,7 @@ namespace Lesson2
             /*
             double sum = 0;
 
-            for (sbyte i = 0; i < array.Length; i++)
+            for (byte i = 0; i < array.Length; i++)
             {
                 sum = sum + array[i];
             }
@@ -144,6 +153,37 @@ namespace Lesson2
             */
 
             //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+            //------------------------------------------------------------------------
+
+
+            //Задание №6
+            
+            int[] arrayA = new int[20];
+            int[] arrayB;
+
+            int z;
+
+            Random random = new Random();
+
+            for (byte i = 0; i < arrayA.Length; i++)
+            {
+                arrayA[i] = (int)random.Next();
+                Console.WriteLine(arrayA[i]);
+
+            }
+
+            for (int i = 0; i < arrayA.Length; i++)
+            {
+                z = i % 2;
+
+                if (z == 0; arrayA[i] > 0)
+                {
+
+                }
+            }
+
+            
         }
     }
 }
