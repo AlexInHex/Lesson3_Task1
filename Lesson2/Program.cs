@@ -6,15 +6,18 @@ namespace Lesson2
     {
         static void Main(string[] args)
         {
-          
-            //НАЧАЛО БЛОКА ДЛЯ 1-5 заданий
+
+            //НАЧАЛО БЛОКА ДЛЯ 1-5 заданий.
+            //Раскомменитировать при проверке заданий от 1 до 5
+            //Проверять задания по одному (больше, чем с одного задания не снимать коментарии)
+            // Спасибо!
             /*
             sbyte[] array = new sbyte[20];
             Random random = new Random();
 
              for (sbyte i = 0; i < array.Length; i++)
              {
-                 array[i] = (sbyte)random.Next();
+                 array[i] = (sbyte)random.Next(-100,100);
                  Console.WriteLine(array[i]);
 
              }
@@ -158,32 +161,56 @@ namespace Lesson2
 
 
             //Задание №6
-            
+            /*
             int[] arrayA = new int[20];
-            int[] arrayB;
-
-            int z;
+            int[] arrayB = new int[20];
+            int parity;
+            int j = 0;
+            double sum = 0;
 
             Random random = new Random();
 
             for (byte i = 0; i < arrayA.Length; i++)
             {
-                arrayA[i] = (int)random.Next();
+                arrayA[i] = (int)random.Next(-100,100);
                 Console.WriteLine(arrayA[i]);
 
             }
+            Console.WriteLine("/////////////////////////");
+            Console.WriteLine("Новый массив↓↓↓");
 
             for (int i = 0; i < arrayA.Length; i++)
             {
-                z = i % 2;
+                parity = i % 2;
 
-                if (z == 0; arrayA[i] > 0)
+                if (parity == 0 && arrayA[i] > 0)
                 {
-
+                    arrayB[j] = arrayB[j] + arrayA[i];
+                    Console.WriteLine(arrayB[j]);
+                    j++;
                 }
             }
 
-            
+            Console.WriteLine(" ");
+
+            // Находим сумму квадратов↓↓↓
+            for (int i = 0; i < arrayB.Length; i++)
+            {
+                sum = sum + arrayB[i] * arrayB[i];
+            }
+
+            Console.WriteLine("Сумма квадратов второго массива = " + sum);
+            */
+
+
+            //-------------------------------------------------------
+            //-------------------------------------------------------
+            //-------------------------------------------------------
+
+
+            // Задание №7
+
+
         }
     }
 }
