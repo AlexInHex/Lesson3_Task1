@@ -9,7 +9,7 @@ namespace Lesson2
 
             //НАЧАЛО БЛОКА ДЛЯ 1-5 заданий.
             //Раскомменитировать при проверке заданий от 1 до 5
-            //Проверять задания по одному (больше, чем с одного задания не снимать коментарии)
+            //Проверять задания с 1 по 5 по одному (больше, чем с одного задания не снимать коментарии)
             // Спасибо!
             /*
             sbyte[] array = new sbyte[20];
@@ -209,8 +209,37 @@ namespace Lesson2
 
 
             // Задание №7
+            /*
+            int[,] arrayA = new int[10,5];
+            int[,] arrayB = new int[5, 10];
 
+            Random random = new Random();
 
+            //↓↓↓Создаем случайные значения элементам массива (от -100 до 100)
+            for (int i = 0; i < arrayA.GetLength(0); i++)
+            {
+                for (int j = 0; j < arrayA.GetLength(1); j++)
+                {
+                    arrayA[i, j] = random.Next(-100,100);
+                    Console.Write("  " + arrayA[i,j]);
+
+                }
+                Console.WriteLine("  ");
+            }
+
+            Console.WriteLine("//////////////////////////////");
+            Console.WriteLine("Транспонированная матрица↓↓↓");
+
+            for (int i = 0; i < arrayB.GetLength(0); i++)
+            {
+                for (int j = 0; j < arrayB.GetLength(1); j++)
+                {
+                    arrayB[i, j] = arrayB[i, j] + arrayA[j,i];
+                    Console.Write("  " + arrayB[i,j]);
+                }
+                Console.WriteLine("  ");
+            }
+            */
         }
     }
 }
