@@ -18,10 +18,10 @@ namespace Lesson2
              for (sbyte i = 0; i < array.Length; i++)
              {
                  array[i] = (sbyte)random.Next(-100,100);
-                 Console.WriteLine(array[i]);
+                 Console.Write(" " + array[i]);
 
              }
-
+            Console.WriteLine();
              Console.WriteLine("--------------------------------------------");
             */
             //КОНЕЦ БЛОКА ДЛЯ 1-5 заданий
@@ -35,22 +35,22 @@ namespace Lesson2
 
 
             // Задание№1
-
-            /* for (int i = 0; i < array.Length; i++)
+            /*
+             for (int i = 1; i < array.Length; i++)
              {
-                 if (array[i] < array[i+1])
+                 if (array[i-1] < array[i])
                  {
-                     Console.WriteLine(array[i+1]);
+                     Console.WriteLine(array[i]);
                  }
-             } */
-
+             } 
+            */
             //-----------------------------------------------------
 
 
             // Задание №2
             /*
-            sbyte max = -128;
-            sbyte min = 127;
+            sbyte max = array[0];
+            sbyte min = array[0];
             int indexMax = -1;
             int indexMin = -1;
 
@@ -82,7 +82,7 @@ namespace Lesson2
 
             for (byte i = 0; i < array.Length; i++)
             {
-                Console.WriteLine(array[i]);
+                Console.Write(" " + array[i]);
             }
             */
 
@@ -110,26 +110,21 @@ namespace Lesson2
 
             //Задание №4
             /*
-            double min = 0;
+            double min = array[0];
             double indexMin = -1;
             double z;
 
-            for (byte i = 0; i < array.Length; i++)
-            {
-                z = i % 2;
-                if (z != 0)
-                {
+            for (int i = 0; i < array.Length; i = i + 2)
+            {                                
                     if (min > array[i])
                     {
                         min = array[i];
                         indexMin = i;
-                    }
-                }
+                    }                
             }
 
             Console.WriteLine("Индеск элемента - " + indexMin + " Значение элемента = " + min);
-            */
-
+            */        
             //--------------------------------------------------------
 
 
@@ -142,7 +137,7 @@ namespace Lesson2
                 sum = sum + array[i];
             }
 
-            sum = sum / 20;
+            sum = sum / array.Length;
 
             Console.WriteLine("Среднее арифметическое = " + sum);
 
@@ -163,8 +158,7 @@ namespace Lesson2
             //Задание №6
             /*
             int[] arrayA = new int[20];
-            int[] arrayB = new int[20];
-            int parity;
+            int[] arrayB = new int[20];            
             int j = 0;
             double sum = 0;
 
@@ -173,17 +167,16 @@ namespace Lesson2
             for (byte i = 0; i < arrayA.Length; i++)
             {
                 arrayA[i] = (int)random.Next(-100,100);
-                Console.WriteLine(arrayA[i]);
+                Console.Write(" " + arrayA[i]);
 
             }
+            Console.WriteLine();
             Console.WriteLine("/////////////////////////");
             Console.WriteLine("Новый массив↓↓↓");
 
             for (int i = 0; i < arrayA.Length; i++)
-            {
-                parity = i % 2;
-
-                if (parity == 0 && arrayA[i] > 0)
+            {            
+                if (i % 2 == 0 && arrayA[i] > 0)
                 {
                     arrayB[j] = arrayB[j] + arrayA[i];
                     Console.WriteLine(arrayB[j]);
@@ -209,7 +202,7 @@ namespace Lesson2
 
 
             // Задание №7
-            /*
+            
             int[,] arrayA = new int[10,5];
             int[,] arrayB = new int[5, 10];
 
@@ -234,12 +227,12 @@ namespace Lesson2
             {
                 for (int j = 0; j < arrayB.GetLength(1); j++)
                 {
-                    arrayB[i, j] = arrayB[i, j] + arrayA[j,i];
+                    arrayB[i, j] = arrayA[j,i];
                     Console.Write("  " + arrayB[i,j]);
                 }
                 Console.WriteLine("  ");
             }
-            */
+            
         }
     }
 }
